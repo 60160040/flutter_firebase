@@ -1,10 +1,18 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/screen/display.dart';
 import 'package:flutter_firebase/screen/formScreen.dart';
 
-void main() {
+/*void main() {
+  runApp(MyApp());
+}*/
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.

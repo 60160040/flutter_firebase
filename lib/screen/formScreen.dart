@@ -17,7 +17,7 @@ class _FormScreenState extends State<FormScreen> {
   Student myStudent = Student();
 
   // เตรียม Firebase
-  final Future<FirebaseApp> firebase = Firebase.initializeApp();
+  final Future <FirebaseApp> firebase =  Firebase.initializeApp();
   CollectionReference _studentCollection = FirebaseFirestore.instance.collection("students");
 
   @override

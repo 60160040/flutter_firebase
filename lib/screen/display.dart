@@ -22,8 +22,17 @@ class _DisplayScreenState extends State<DisplayScreen> {
             return Center(child: CircularProgressIndicator(),);
           }
           return ListView(
-            children: snapshot.data.docs.map((document){
-
+            children: snapshot.data!.docs.map((document){
+              return Container(
+                child: ListTile(
+                  leading: CircleAvatar(
+                    radius: 30,
+                    child: FittedBox(child: Text(document["score"]),),
+                  ),
+                  title: Text("${document["fname"]}   ${document["lname"]}"),
+                  subtitle: Text(document["email"]),
+                ),
+              );
             }).toList(),
           );
         },
